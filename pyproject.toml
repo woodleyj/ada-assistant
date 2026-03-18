@@ -1,0 +1,31 @@
+[project]
+name = "ada-assistant"
+version = "0.1.0"
+description = "Automated Directive Assistant - A professional-grade lightweight Python CLI tool for terminal commands."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "ADA Developer", email = "developer@example.com" }
+]
+dependencies = [
+    "google-genai",
+    "python-dotenv",
+    "rich",
+    "pyfiglet",
+    "psutil",
+    "pyperclip",
+    "questionary"
+]
+
+[project.scripts]
+ada = "assistant.main:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
